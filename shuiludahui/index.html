@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="水陆大会专题页面。提供关于水陆大会的历史起源、佛教背景、经典文学描述（西游记）、现代传承及法会仪轨的详细图文介绍。">
+    <meta name="keywords" content="水陆大会, 西游记, 水陆法会, 佛教法会, 水陆道场, 梵音">
+    <title>水陆大会-佛教法会仪轨与历史渊源详解</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2B48C;
+            --bg-color: #FDFBF7;
+            --text-color: #333;
+            --light-text: #666;
+            --card-bg: #fff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-family: "KaiTi", serif;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/sanwu/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #6d360e;
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 60px var(--spacing-unit);
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-family: "KaiTi", serif;
+        }
+
+        .section-title p {
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .text-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .text-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .intro-img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Features Cards */
+        .features {
+            background-color: #fff;
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+
+        /* Literature Section */
+        .literature-section {
+            background-color: #f4f1ea;
+            padding: 80px 0;
+        }
+
+        .literature-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .literature-item {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .literature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .literature-item h3::before {
+            content: "❖";
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+
+        .literature-item p {
+            text-indent: 2em;
+            margin-bottom: 10px;
+        }
+
+        /* Timeline / Process */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #ddd;
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            background: var(--bg-color);
+            padding: 0 20px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 auto 15px;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .step h4 {
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            background: #fff;
+        }
+
+        .faq-question:hover {
+            background: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--light-text);
+            display: none;
+            border-top: 1px solid #f9f9f9;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                padding: 0 15px;
+            }
+            
+            nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding: 20px;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .process-steps::before {
+                width: 2px;
+                height: 100%;
+                left: 25px;
+                top: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo"><span>水陆</span>大会</a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#origin" class="active">历史渊源</a></li>
+                    <li><a href="#process">法会流程</a></li>
+                    <li><a href="#literature">文学记载</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>法界圣凡水陆大会</h1>
+                <p>超度亡灵，普利法界。探寻佛教法会中最盛大、最庄严的宗教仪轨，重温经典文学中的殊胜场景。</p>
+                <a href="#origin" class="btn">了解法会详情</a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="origin" class="container">
+            <div class="section-title">
+                <h2>什么是水陆大会？</h2>
+                <p>水陆法会，又称“水陆道场”，是中国佛教中最为隆重、规模最大的法会之一。</p>
+            </div>
+            
+            <div class="grid-2">
+                <div class="text-content">
+                    <h3>宗教意义</h3>
+                    <p>水陆法会全称“法界圣凡水陆普度大斋胜会”，意为“法界”是指十法界，“圣”指六凡（天、人、阿修罗、畜生、饿鬼、地狱），“凡”指六道众生。法会旨在通过供养三宝、诵经礼忏，超度六道四生一切沉沦受苦的众生，使其离苦得乐，往生净土。</p>
+                    <h3>历史起源</h3>
+                    <p>关于水陆法会的起源，有多种说法。一般公认梁武帝萧衍是发起者。传说梁武帝梦游地狱，见众生受苦，遂问志公和尚如何解救。志公和尚建议设坛普度，梁武帝依言举行法会，并命僧祐律师撰文建坛，遂成定式。此后历代帝王多崇信并推广此法会。</p>
+                    <p>水陆法会不仅具有宗教超度功能，也是中国佛教文化、民俗文化的重要组成部分，体现了佛教慈悲济世的精神。</p>
+                </div>
+                <div class="text-content">
+                    <img src="https://picsum.photos/seed/temple/600/400" alt="佛教寺庙与水陆法会场景示意" class="intro-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>法会核心仪轨</h2>
+                    <p>一场完整的水陆法会通常持续七昼夜，包含诵经、拜忏、供养、施食等多种仪式。</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🙏</div>
+                        <h4>上堂斋供</h4>
+                        <p>为寺院常住僧众供养斋饭，表达对三宝的恭敬，同时以此功德回向法界众生。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📖</div>
+                        <h4>请圣迎请</h4>
+                        <p>通过庄严的仪轨，恭敬迎请十方诸佛菩萨、护法龙天降临法会道场，接受供养。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🍲</div>
+                        <h4>施食饿鬼</h4>
+                        <p>施放蒙山焰口，将食物化为甘露，令饿鬼道众生得以饱腹，离苦得乐。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📜</div>
+                        <h4>诵经拜忏</h4>
+                        <p>诵读《梁皇宝忏》、《地藏经》、《金刚经》等大乘经典，礼拜诸佛菩萨，以此功德超度亡灵。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Literature Section -->
+        <section id="literature" class="literature-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>经典文学中的水陆大会</h2>
+                    <p>《西游记》中关于水陆大会的描写，生动再现了当时的宗教盛况。</p>
+                </div>
+                <div class="literature-content">
+                    <div class="literature-item">
+                        <h3>第六回：观音赴会问原因 小圣施威降大圣</h3>
+                        <p>观音菩萨向玉帝举荐孙悟空去降服妖猴，并推荐金蝉子转世的唐僧去西天取经。玉帝准奏，并决定在长安金光寺举办一场“水陆大会”，为超度亡魂而设。</p>
+                    </div>
+                    <div class="literature-item">
+                        <h3>第七回：鬼王夜谒唐三藏 悟空神化引婴儿</h3>
+                        <p>水陆大会正式举行。观音菩萨化身癞头行者，化作“金蝉子”的徒弟，点化唐僧。唐僧因此舍弃了原定的十位高僧，改请孙悟空的师父须菩提祖师的弟子——金蝉子转世的玄奘法师主持法会。</p>
+                    </div>
+                    <div class="literature-item">
+                        <h3>第八回：我佛造经传极乐 观音奉旨上长安</h3>
+                        <p>水陆大会法会圆满结束，观音菩萨奉如来佛祖之命，去东土大唐寻找取经人。唐僧在法会结束后，正式踏上西天取经之路，法会成为了取经缘分的开端。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="container">
+            <div class="section-title">
+                <h2>法会主要流程</h2>
+                <p>虽然现代水陆法会简化了许多环节，但核心步骤依然严谨有序。</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>洒净</h4>
+                    <p>法师持杨柳枝蘸水，洒向法坛，以此清净道场。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>结界</h4>
+                    <p>设置界标，划定法会范围，防止外魔入侵。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>请圣</h4>
+                    <p>恭敬迎请诸佛菩萨降临，接受供养。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>上供</h4>
+                    <p>供养香花灯烛、饮食果品等。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h4>诵经</h4>
+                    <p>众僧齐诵经咒，以此功德回向。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h4>送圣</h4>
+                    <p>法会结束，送别诸佛菩萨，将法会功德回向给法界众生。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        水陆法会需要持续多久？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>传统的佛教水陆法会通常持续七昼夜（7天），称为“七日水陆”。这是最完整、最隆重的形式。现代根据寺院条件和需求，有时也会举办一日、三日或五日的简略法会。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        普通人可以参加水陆法会吗？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以。水陆法会是对“法界圣凡”开放的，普通信众可以随喜参加。信众可以通过皈依、听经、发心供养、随众礼佛等方式参与，以此积累功德。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        水陆法会与普佛有什么区别？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>水陆法会规模宏大，内容最全，包括上堂、下堂、请圣、送圣等复杂仪轨；而普佛通常指“延生普佛”或“往生普佛”，规模相对较小，以礼诵《阿弥陀经》、供养诸佛菩萨为主，主要目的是为在世者祈求福寿或为亡者祈福。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于水陆大会</h4>
+                <p>致力于普及佛教文化知识，介绍水陆法会的历史渊源、仪轨流程及经典文献，为信众提供修学参考。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#origin">历史渊源</a></li>
+                    <li><a href="#process">法会流程</a></li>
+                    <li><a href="#literature">文学记载</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关链接</h4>
+                <ul>
+                    <li><a href="#">佛教协会官网</a></li>
+                    <li><a href="#">寺院法务信息</a></li>
+                    <li><a href="#">《西游记》百科</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 水陆大会文化专题站. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+
+            // If it wasn't active, open it
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('main-nav').classList.remove('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
