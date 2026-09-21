@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="国产发电机组专业导购平台，提供柴油发电机组、汽油发电机组、静音发电机及移动电站的型号参数、性能对比、选购指南及售后服务信息。">
+    <meta name="keywords" content="国产发电机组,柴油发电机组,静音发电机,移动电站,备用电源,康明斯发电机">
+    <title>国产发电机组-专业动力解决方案与型号选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-hover: #004494;
+            --secondary-color: #f8f9fa;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e1e4e8;
+            --accent-color: #ff9800;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar {
+            background: var(--primary-color);
+            color: #fff;
+            font-size: 14px;
+            padding: 8px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eef2f3 0%, #dbeafe 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            padding-top: 30px;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .stat-item span {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+            color: var(--text-main);
+        }
+
+        .section-header a {
+            font-size: 14px;
+            color: var(--primary-color);
+        }
+
+        /* Product Cards */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 86, 179, 0.9);
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-specs {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            color: #d32f2f;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .price span {
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 13px;
+            background: #f0f0f0;
+            color: var(--text-main);
+            border-radius: 4px;
+        }
+
+        .btn-sm:hover {
+            background: #e0e0e0;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .category-list li {
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .category-list span {
+            background: #f0f0f0;
+            color: var(--text-light);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: var(--secondary-color);
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span>24小时服务热线：400-888-8888</span>
+                <span>欢迎访问国产发电机组专业选购平台</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                    <span>动力源</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">首页</a></li>
+                        <li><a href="#">柴油发电机组</a></li>
+                        <li><a href="#">汽油发电机组</a></li>
+                        <li><a href="#">静音发电机组</a></li>
+                        <li><a href="#">移动电站</a></li>
+                        <li><a href="#">配件与耗材</a></li>
+                        <li><a href="#">工程案例</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="cta-btn">免费咨询</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>国产发电机组<br>高效稳定动力解决方案</h1>
+            <p>专注国产高端发电机组研发与制造，提供从10kW到3000kW的全功率段产品，满足建筑工地、医院、数据中心及户外作业的应急与备用电源需求。</p>
+            <div class="hero-tags">
+                <span class="tag">低油耗设计</span>
+                <span class="tag">静音环保</span>
+                <span class="tag">一键启动</span>
+                <span class="tag">智能监控</span>
+                <span class="tag">质保三年</span>
+            </div>
+            <a href="#products" class="cta-btn" style="padding: 15px 40px; font-size: 18px;">浏览产品系列</a>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong>500+</strong>
+                    <span>合作工程案例</span>
+                </div>
+                <div class="stat-item">
+                    <strong>50+</strong>
+                    <span>品牌授权代理</span>
+                </div>
+                <div class="stat-item">
+                    <strong>24h</strong>
+                    <span>快速响应服务</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container main-layout">
+        <!-- Left Column: Products -->
+        <section id="products">
+            <div class="section-header">
+                <h2>热门机型推荐</h2>
+                <a href="#">查看更多型号 &rarr;</a>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="card-img">
+                        <span class="badge">热销</span>
+                        <img src="https://picsum.photos/seed/gen1/400/300" alt="柴油发电机组">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">柴油发电机组 200kW 康明斯动力</h3>
+                        <div class="card-specs">
+                            <div class="spec-row">
+                                <span>额定功率：200kW</span>
+                                <span>频率：50Hz</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>电压：380V</span>
+                                <span>功率因数：0.8</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>燃油消耗：195g/kW·h</span>
+                                <span>类型：静音型</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price">¥158,000<span>/台起</span></div>
+                            <a href="#" class="btn-sm">参数详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/gen2/400/300" alt="汽油发电机组">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">汽油发电机组 5KW 移动静音电站</h3>
+                        <div class="card-specs">
+                            <div class="spec-row">
+                                <span>额定功率：5kW</span>
+                                <span>启动方式：电启动</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>油箱容量：25L</span>
+                                <span>运行时间：10h</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>噪音：68dB</span>
+                                <span>用途：户外应急</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price">¥4,800<span>/台起</span></div>
+                            <a href="#" class="btn-sm">参数详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <div class="card-img">
+                        <span class="badge">新品</span>
+                        <img src="https://picsum.photos/seed/gen3/400/300" alt="全自动发电机组">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">全自动切换发电机组 100kW</h3>
+                        <div class="card-specs">
+                            <div class="spec-row">
+                                <span>额定功率：100kW</span>
+                                <span>切换时间：0.1s</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>控制方式：智能数显</span>
+                                <span>防护等级：IP23</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>功能：ATS自动切换</span>
+                                <span>适用：机房备用</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price">¥89,000<span>/台起</span></div>
+                            <a href="#" class="btn-sm">参数详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/gen4/400/300" alt="双燃料发电机组">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">天然气双燃料发电机组 150kW</h3>
+                        <div class="card-specs">
+                            <div class="spec-row">
+                                <span>额定功率：150kW</span>
+                                <span>燃料：天然气/柴油</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>经济性：节省30%成本</span>
+                                <span>环保：低排放</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>适用：矿区/工厂</span>
+                                <span>状态：现货供应</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price">¥125,000<span>/台起</span></div>
+                            <a href="#" class="btn-sm">参数详情</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Selection Guide -->
+            <div class="section-header" style="margin-top: 50px;">
+                <h2>选购指南</h2>
+            </div>
+            <article style="background: #f9f9f9; padding: 30px; border-radius: 8px; border-left: 4px solid var(--accent-color);">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">如何选择合适的国产发电机组？</h3>
+                <p style="margin-bottom: 10px; color: #555;">
+                    <strong>1. 确定功率需求：</strong>根据负载的总功率（KW）选择，建议预留10%-20%的余量以应对突发负载。切勿仅按设备铭牌功率简单相加，需考虑启动电流的影响。
+                </p>
+                <p style="margin-bottom: 10px; color: #555;">
+                    <strong>2. 考虑使用环境：</strong>如果是户外作业，需选择防水防尘等级高（如IP54以上）的移动电站；如果是室内或对噪音敏感区域，必须选择静音发电机组或加装消音装置。
+                </p>
+                <p style="margin-bottom: 10px; color: #555;">
+                    <strong>3. 燃料类型选择：</strong>汽油机启动容易、维护简单，适合小功率（<10kW）临时使用；柴油机功率大、燃油经济性好，适合大功率长期备用；双燃料机型适合天然气资源丰富的矿区或工厂。
+                </p>
+                <p style="color: #555;">
+                    <strong>4. 售后与认证：</strong>优先选择提供整机质保、拥有原厂授权证书以及本地化维修服务的品牌。
+                </p>
+            </article>
+        </section>
+
+        <!-- Right Column: Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h4 class="sidebar-title">产品分类</h4>
+                <ul class="category-list">
+                    <li><a href="#">柴油发电机组 <span>120+</span></a></li>
+                    <li><a href="#">汽油发电机组 <span>45+</span></a></li>
+                    <li><a href="#">静音发电机组 <span>30+</span></a></li>
+                    <li><a href="#">移动电站 <span>25+</span></a></li>
+                    <li><a href="#">双燃料机组 <span>15+</span></a></li>
+                    <li><a href="#">自动化机组 <span>20+</span></a></li>
+                    <li><a href="#">备用电源系统 <span>10+</span></a></li>
+                    <li><a href="#">应急发电车 <span>8+</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h4 class="sidebar-title">常见问题 FAQ</h4>
+                <div style="font-size: 14px;">
+                    <details style="margin-bottom: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-main);">发电机多久保养一次？</summary>
+                        <p style="color: var(--text-light); margin-top: 5px; font-size: 13px;">建议每运行200-300小时进行一次小保养（换机油、滤芯），每1000小时进行大保养。</p>
+                    </details>
+                    <details style="margin-bottom: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-main);">静音发电机真的静音吗？</summary>
+                        <p style="color: var(--text-light); margin-top: 5px; font-size: 13px;">静音发电机组通过箱体和隔音棉设计，噪音可控制在65-75分贝之间，比普通机组降低20-30分贝。</p>
+                    </details>
+                    <details style="margin-bottom: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-main);">ATS自动切换时间多长？</summary>
+                        <p style="color: var(--text-light); margin-top: 5px; font-size: 13px;">优质的ATS控制器切换时间通常在0.1秒至0.5秒之间，能确保负载不断电。</p>
+                    </details>
+                </div>
+            </div>
+
+            <div class="sidebar-widget" style="background: #e3f2fd; border-color: #bbdefb;">
+                <h4 class="sidebar-title" style="color: var(--primary-color);">获取报价</h4>
+                <p style="font-size: 13px; margin-bottom: 15px; color: #555;">请留下您的联系方式，我们的工程师将在24小时内与您联系。</p>
+                <form style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="text" placeholder="您的称呼" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="tel" placeholder="联系电话" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                    <select style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff;">
+                        <option>请选择功率需求</option>
+                        <option>10kW以下</option>
+                        <option>10kW - 100kW</option>
+                        <option>100kW - 500kW</option>
+                        <option>500kW以上</option>
+                    </select>
+                    <button type="button" class="cta-btn" style="border: none; cursor: pointer; text-align: center; padding: 10px;">提交咨询</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Features Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">⚡</div>
+                    <h3>强劲动力</h3>
+                    <p>搭载国内知名品牌发动机，动力强劲，燃油经济性高，满足各类复杂工况需求。</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🛡️</div>
+                    <h3>稳定可靠</h3>
+                    <p>全铜绕组发电机，精密电控系统，确保输出电压和频率稳定，故障率低。</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🔧</div>
+                    <h3>完善售后</h3>
+                    <p>全国联保服务，提供24小时技术支持，定期回访，确保设备长期稳定运行。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: #fff; margin-bottom: 20px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                        <span>动力源</span>
+                    </div>
+                    <p style="line-height: 1.8; color: #999;">
+                        专注国产发电机组行业十年，致力于为用户提供高品质、低噪音、智能化的电力解决方案。从产品设计到安装调试，我们提供一站式服务。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">产品中心</a></li>
+                        <li><a href="#">工程案例</a></li>
+                        <li><a href="#">新闻资讯</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="#">柴油发电机组</a></li>
+                        <li><a href="#">汽油发电机组</a></li>
+                        <li><a href="#">静音发电机组</a></li>
+                        <li><a href="#">自动化控制</a></li>
+                        <li><a href="#">移动电站</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：400-888-8888</li>
+                        <li>邮箱：sales@power-source.com</li>
+                        <li>地址：中国·某市工业园区A栋88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 国产发电机组专业服务平台 版权所有 | 隐私政策 | 使用条款</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                                                                    </html>
