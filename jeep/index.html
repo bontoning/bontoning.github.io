@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeep兄弟连 - 越野文化、经典车型与硬核改装指南</title>
+    <meta name="description" content="jeep兄弟连专注于硬派越野文化，提供经典Jeep车型评测、改装案例分享、越野装备推荐及硬核自驾路线攻略。探索自由精神，连接全球车友。">
+    <meta name="keywords" content="jeep兄弟连, Jeep越野, 吉普改装, 硬派越野, 越野装备, 越野自驾">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，代表越野的激情与历史 */
+            --secondary-color: #f0f0f0;
+            --accent-color: #d4af37; /* 金色，代表经典与品质 */
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 4px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/seed/jeep-terrain/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #a00000;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: var(--text-dark);
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 热门车型 */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more:hover {
+            gap: 8px;
+        }
+
+        /* 改装案例 */
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        /* 装备推荐 */
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(139, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* 路线推荐 */
+        .route-card {
+            position: relative;
+            height: 350px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            group: cursor;
+        }
+
+        .route-card img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .route-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 30px;
+            color: #fff;
+        }
+
+        .route-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .route-location {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .route-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* 关于我们 / 常见问题 */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            display: none;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter-form input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            flex: 1;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #a00000;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-container nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+            }
+
+            .nav-container nav.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .route-card {
+                height: 250px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部导航 -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                </svg>
+                jeep<span>兄弟连</span>
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#models">车型鉴赏</a></li>
+                    <li><a href="#tuning">改装案例</a></li>
+                    <li><a href="#gear">越野装备</a></li>
+                    <li><a href="#routes">自驾路线</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Jeep兄弟连：硬派越野，无界征途</h1>
+            <p>探索自由精神，连接全球车友。我们专注于硬派越野文化的传播，分享改装技巧，评测顶级越野装备，为你规划最硬核的自驾路线。</p>
+            <div>
+                <a href="#models" class="btn">探索车型</a>
+                <a href="#routes" class="btn btn-outline">查看路线</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门车型 -->
+    <section id="models">
+        <div class="container">
+            <div class="section-header">
+                <h2>经典车型鉴赏</h2>
+                <p>从牧马人到大切诺基，重温硬派传奇，感受机械之美。</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/jeep-wrangler/400/300" alt="Jeep牧马人">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">硬派越野</span>
+                        <h3 class="card-title">Jeep牧马人：永恒的越野图腾</h3>
+                        <p class="card-desc">经典的可拆卸顶棚，强悍的四驱系统，它是无数车迷心中的梦想之车。详解牧马人的历史演变与核心配置。</p>
+                        <div class="card-footer">
+                            <span>2023-10-24</span>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/jeep-grand-cherokee/400/300" alt="大切诺基">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">全地形车</span>
+                        <h3 class="card-title">大切诺基：公路与野外的平衡艺术</h3>
+                        <p class="card-desc">在保持豪华舒适的同时提供卓越的越野能力，大切诺基是家庭用户的理想选择。深度解析其Active Drive四驱系统。</p>
+                        <div class="card-footer">
+                            <span>2023-10-22</span>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/jeep-compass/400/300" alt="指南者">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">入门首选</span>
+                        <h3 class="card-title">Jeep指南者：城市出行的全能伙伴</h3>
+                        <p class="card-desc">紧凑型SUV的佼佼者，拥有Jeep家族标志性的外观设计。适合日常通勤与周末短途郊游，性价比之选。</p>
+                        <div class="card-footer">
+                            <span>2023-10-20</span>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 改装案例 -->
+    <section id="tuning" class="bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>硬核改装案例</h2>
+                <p>挖掘潜力，释放野性。看看车友们是如何将爱车打造成专属座驾的。</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/tuning-jeep-1/400/300" alt="大脚改装">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">悬挂升级</span>
+                        <h3 class="card-title">牧马人4英寸升高：征服复杂地形</h3>
+                        <p class="card-desc">更换4英寸升高套件，搭配37英寸大脚轮胎，不仅视觉效果提升，爬坡脱困能力也大幅增强。</p>
+                        <div class="card-footer">
+                            <span>案例编号：J-2023-09</span>
+                            <a href="#" class="read-more">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/tuning-jeep-2/400/300" alt="外观改装">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">外观套件</span>
+                        <h3 class="card-title">经典战斧轮毂：视觉冲击力MAX</h3>
+                        <p class="card-desc">将原厂轮毂更换为22寸战斧轮毂，配合黑色车衣，打造极具攻击性的“暗夜战士”风格。</p>
+                        <div class="card-footer">
+                            <span>案例编号：J-2023-08</span>
+                            <a href="#" class="read-more">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/tuning-jeep-3/400/300" alt="灯光升级">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">灯光系统</span>
+                        <h3 class="card-title">越野探照灯安装指南</h3>
+                        <p class="card-desc">在车顶和前杠加装射灯，解决夜间越野照明不足的问题，保障行车安全，照亮前行的道路。</p>
+                        <div class="card-footer">
+                            <span>案例编号：J-2023-07</span>
+                            <a href="#" class="read-more">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 装备推荐 -->
+    <section id="gear">
+        <div class="container">
+            <div class="section-header">
+                <h2>越野装备推荐</h2>
+                <p>工欲善其事，必先利其器。专业装备助你应对各种恶劣环境。</p>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">🚙</div>
+                    <h3>全地形轮胎</h3>
+                    <p>提供卓越的抓地力，适应泥地、沙地、雪地等多种路况。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔧</div>
+                    <h3>绞盘系统</h3>
+                    <p>关键时刻的救命稻草，帮助车辆脱困，提升安全性。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>防护护板</h3>
+                    <p>保护发动机、变速箱等核心部件免受石子撞击和剐蹭。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎒</div>
+                    <h3>应急工具包</h3>
+                    <p>包含拖车绳、搭电线、充气泵等必备救援工具。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 自驾路线 -->
+    <section id="routes">
+        <div class="container">
+            <div class="section-header">
+                <h2>热门自驾路线</h2>
+                <p>带上家人，驾驶爱车，去探索那些未被开发的秘境。</p>
+            </div>
+            <div class="grid-3">
+                <article class="route-card">
+                    <img src="https://picsum.photos/seed/desert-road/600/400" alt="戈壁穿越">
+                    <div class="route-overlay">
+                        <div class="route-location">📍 甘肃 · 青海</div>
+                        <h3 class="route-title">穿越柴达木：无人区的呼唤</h3>
+                        <p>全长800公里，穿越盐湖、戈壁与雅丹地貌，体验极致的荒凉与壮美。</p>
+                    </div>
+                </article>
+                <article class="route-card">
+                    <img src="https://picsum.photos/seed/forest-trail/600/400" alt="雨林穿越">
+                    <div class="route-overlay">
+                        <div class="route-location">📍 云南 · 西双版纳</div>
+                        <h3 class="route-title">热带雨林探险之旅</h3>
+                        <p>在湿热的环境中挑战泥泞山路，感受原始森林的神秘气息。</p>
+                    </div>
+                </article>
+                <article class="route-card">
+                    <img src="https://picsum.photos/seed/mountain-pass/600/400" alt="高山穿越">
+                    <div class="route-overlay">
+                        <div class="route-location">📍 新疆 · 喀纳斯</div>
+                        <h3 class="route-title">独库公路：一日游四季</h3>
+                        <p>连接南北疆的景观大道，四季景色各异，是检验车辆性能的最佳试炼场。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-list" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">新手入门Jeep越野需要注意什么？ <span>+</span></div>
+                    <div class="faq-answer">
+                        新手建议先在平整的场地练习低速四驱模式，熟悉车辆特性。同时务必配备必要的救援工具和了解基本的车辆维护知识，结伴出行，不要独自深入未开发区域。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">牧马人适合城市通勤吗？ <span>+</span></div>
+                    <div class="faq-answer">
+                        牧马人的舒适性和燃油经济性相对普通城市SUV较低，噪音较大。如果是日常通勤且里程不多，可以接受；如果是高频通勤，建议考虑大切诺基或指南者。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">越野改装有哪些法律法规限制？ <span>+</span></div>
+                    <div class="faq-answer">
+                        改装需遵守当地交通法规。轮胎尺寸不得超标，车身高度增加需符合规定，灯光系统必须符合国标。建议在改装前咨询当地车管所或专业改装店。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/jeep-club/600/400" alt="Jeep车友会" style="border-radius: var(--border-radius);">
+                </div>
+                <div class="about-text">
+                    <h3>关于 Jeep兄弟连</h3>
+                    <p>Jeep兄弟连成立于2015年，是一个致力于推广硬派越野文化、连接全球Jeep车主与爱好者的社区平台。我们相信，驾驶不仅是交通工具，更是一种探索世界、挑战自我的生活方式。</p>
+                    <p>无论你是拥有牧马人的资深玩家，还是刚刚入手指南者的新手，这里都有属于你的位置。我们定期举办线下越野活动、技术分享会，并提供最专业的资讯服务。</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>5000+</h4>
+                            <span>注册会员</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>120+</h4>
+                            <span>成功案例</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <span>合作改装店</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>100%</h4>
+                            <span>热情服务</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>jeep兄弟连</h3>
+                    <p>连接热爱，征服自然。加入我们，开启你的硬派越野之旅。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">车型大全</a></li>
+                        <li><a href="#">改装论坛</a></li>
+                        <li><a href="#">装备商城</a></li>
+                        <li><a href="#">活动报名</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>内容栏目</h4>
+                    <ul>
+                        <li><a href="#">越野攻略</a></li>
+                        <li><a href="#">技术文章</a></li>
+                        <li><a href="#">车友故事</a></li>
+                        <li><a href="#">路线推荐</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>订阅更新</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 10px;">获取最新的越野资讯与活动通知。</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢订阅！我们将定期发送越野资讯。');">
+                        <input type="email" placeholder="输入您的邮箱" required>
+                        <button type="submit">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 jeep兄弟连. All Rights Reserved. 本网站为演示用途，内容仅供参考。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // FAQ 折叠效果
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('active');
+                // 更新加号减号
+                const span = item.querySelector('.faq-question span');
+                span.textContent = item.classList.contains('active') ? '-' : '+';
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // 点击导航后关闭移动端菜单
+                    const nav = document.getElementById('main-nav');
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+              </html>
