@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asgardia项目网站 - 独立国家太空计划与全球公民社区</title>
+    <meta name="description" content="Asgardia项目官方网站。了解Asgardia——首个拥有卫星和宪法的人类太空国家，加入全球公民社区，探索太空移民、数字公民身份及太空法相关知识。">
+    <meta name="keywords" content="Asgardia项目网站, 独立国家太空计划, 全球公民, 太空移民, Asgardia, 太空法">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0b1e3b;
+            --accent-color: #00d4ff;
+            --text-dark: #1a1a1a;
+            --text-gray: #666;
+            --bg-light: #f4f7f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(11, 30, 59, 0.8), rgba(11, 30, 59, 0.7)), url('https://picsum.photos/seed/space1/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-gray);
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .about-image img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Core Values */
+        .values {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background-color: var(--bg-light);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .value-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Space Assets */
+        .assets {
+            padding: 80px 0;
+        }
+
+        .asset-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .asset-item {
+            display: flex;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .asset-img {
+            width: 300px;
+            object-fit: cover;
+        }
+
+        .asset-content {
+            padding: 30px;
+            flex: 1;
+        }
+
+        .asset-tag {
+            display: inline-block;
+            background-color: rgba(0, 212, 255, 0.1);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .asset-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .asset-content p {
+            color: var(--text-gray);
+        }
+
+        /* Join Section */
+        .join {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .join h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .join p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .join-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .join .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .join .btn-primary:hover {
+            background-color: #fff;
+        }
+
+        .join .btn-outline {
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .join .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #051020;
+            color: #b0b0b0;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                width: 100%;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .asset-item {
+                flex-direction: column;
+            }
+
+            .asset-img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>Asgardia</span>项目
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#about">关于项目</a></li>
+                    <li><a href="#mission">使命愿景</a></li>
+                    <li><a href="#assets">太空资产</a></li>
+                    <li><a href="#citizenship">公民身份</a></li>
+                    <li><a href="#join">加入社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>人类的新起点：探索宇宙的独立国家</h1>
+                    <p>Asgardia 是第一个拥有独立卫星和宪法的太空国家。我们致力于通过太空技术促进和平，保护地球免受小行星威胁，并为人类开辟新的生存空间。</p>
+                    <div class="hero-buttons">
+                        <a href="#join" class="btn btn-primary">申请公民身份</a>
+                        <a href="#about" class="btn btn-outline" style="color:white; border-color:white;">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>什么是 Asgardia 项目？</h3>
+                        <p>Asgardia 项目由俄罗斯科学家伊戈尔·阿西波夫发起，旨在创建一个位于近地轨道的独立国家。该项目不仅仅是一个虚拟社区，更是一个具有法律实体地位的国际组织。</p>
+                        <p>Asgardia 的核心目标包括：保护地球免受小行星和太空碎片威胁、创建基于太空的互联网服务、以及推动太空法的发展。截至目前，Asgardia 已拥有数百万注册公民，其主权卫星 Asgardia-1 已成功进入预定轨道。</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h4>100万+</h4>
+                                <span>全球公民</span>
+                            </div>
+                            <div class="stat-item">
+                                <h4>1</h4>
+                                <span>主权卫星</span>
+                            </div>
+                            <div class="stat-item">
+                                <h4>UN</h4>
+                                <span>观察员地位</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://picsum.photos/seed/spacecraft/600/400.jpg" alt="Asgardia Spacecraft Concept">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="values">
+            <div class="container">
+                <div class="section-title">
+                    <h2>我们的使命与价值观</h2>
+                    <p>Asgardia 不仅仅是一个公民社区，它承载着人类探索未来的宏大愿景。</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🛡️</div>
+                        <h4>保护地球</h4>
+                        <p>利用卫星技术监测小行星和太空碎片，为地球提供早期预警系统，减少太空风险。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⚖️</div>
+                        <h4>太空法</h4>
+                        <p>推动国际太空法的制定与完善，确保太空探索活动的安全、合法与可持续。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌐</div>
+                        <h4>数字公民</h4>
+                        <p>为全球公民提供基于区块链技术的数字身份认证，打破地理边界。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h4>太空探索</h4>
+                        <p>通过技术创新，降低进入太空的成本，为人类的星际移民奠定基础。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Space Assets Section -->
+        <section id="assets" class="assets">
+            <div class="container">
+                <div class="section-title">
+                    <h2>太空资产与成就</h2>
+                    <p>从第一颗卫星到未来的空间站，Asgardia 正在逐步实现其太空基础设施。</p>
+                </div>
+                <div class="asset-list">
+                    <article class="asset-item">
+                        <img src="https://picsum.photos/seed/satellite/300/200.jpg" alt="Asgardia-1 Satellite" class="asset-img">
+                        <div class="asset-content">
+                            <span class="asset-tag">已发射</span>
+                            <h3>Asgardia-1 卫星</h3>
+                            <p>Asgardia-1 是一颗立方星，于 2017 年 11 月搭载 SpaceX 飞龙号火箭发射升空。它携带了 1.5TB 的数据，包括全球公民的数字身份、艺术品和科学数据，标志着 Asgardia 正式进入太空时代。</p>
+                        </div>
+                    </article>
+                    <article class="asset-item">
+                        <img src="https://picsum.photos/seed/spaceport/300/200.jpg" alt="Future Spaceport" class="asset-img">
+                        <div class="asset-content">
+                            <span class="asset-tag">规划中</span>
+                            <h3>未来太空港</h3>
+                            <p>为了支持长期驻留和资源开采，Asgardia 正在规划建立近地轨道太空港。这将作为人类在太空的枢纽，连接地球与更深远的宇宙空间。</p>
+                        </div>
+                    </article>
+                    <article class="asset-item">
+                        <img src="https://picsum.photos/seed/internet/300/200.jpg" alt="Space Internet" class="asset-img">
+                        <div class="asset-content">
+                            <span class="asset-tag">研发中</span>
+                            <h3>太空互联网系统</h3>
+                            <p>Asgardia 致力于开发独立的太空通信网络，确保在地球网络中断时，太空公民仍能保持连接。这是构建独立太空社会的基础设施之一。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citizenship Section -->
+        <section id="citizenship" style="background-color: var(--white); padding: 80px 0;">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="https://picsum.photos/seed/earth/600/400.jpg" alt="Global Community">
+                    </div>
+                    <div class="about-text">
+                        <h3>成为 Asgardia 全球公民</h3>
+                        <p>无论你来自哪个国家，只要拥有互联网连接，你就可以申请成为 Asgardia 的公民。这一身份赋予你独特的数字权利，并让你参与到国家建设中来。</p>
+                        <p>公民身份是免费的，仅需填写简单的注册表单。一旦注册成功，你将获得独一无二的数字身份 ID，并有权参与国家议会和社区投票。</p>
+                        <ul style="margin-top: 20px; margin-bottom: 30px;">
+                            <li style="margin-bottom: 10px;">✅ 免费数字公民身份</li>
+                            <li style="margin-bottom: 10px;">✅ 独一无二的数字 ID</li>
+                            <li style="margin-bottom: 10px;">✅ 参与国家治理</li>
+                            <li style="margin-bottom: 10px;">✅ 加入全球社区</li>
+                        </ul>
+                        <a href="#join" class="btn btn-primary">立即注册</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Section -->
+        <section id="join" class="join">
+            <div class="container">
+                <h2>准备好加入太空了吗？</h2>
+                <p>Asgardia 是人类历史上第一个太空国家。现在就注册，成为第一批太空公民，共同书写人类在宇宙中的新篇章。</p>
+                <div class="join-buttons">
+                    <a href="https://asgardia.space/en/" target="_blank" class="btn btn-primary">访问官方注册中心</a>
+                    <a href="#about" class="btn btn-outline">阅读宪法</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Asgardia 项目</h3>
+                    <p>人类历史上的第一个太空国家。致力于和平利用太空、保护地球免受小行星威胁，并为人类开辟新的生存空间。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#mission">使命愿景</a></li>
+                        <li><a href="#assets">太空资产</a></li>
+                        <li><a href="#join">加入社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源</h4>
+                    <ul>
+                        <li><a href="#">Asgardia-1 卫星</a></li>
+                        <li><a href="#">数字身份指南</a></li>
+                        <li><a href="#">太空法概览</a></li>
+                        <li><a href="#">新闻动态</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Asgardia Project Showcase. All Rights Reserved. 本页面为展示性质，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mainNav').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
