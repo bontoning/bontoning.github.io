@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="在线中文字幕网提供高清影视、动漫、综艺的中文字幕下载及在线观看服务，支持多种格式，收录最新热门影视资源，致力于打造最专业的字幕分享平台。">
+    <meta name="keywords" content="在线中文字幕,字幕下载,影视字幕,中文字幕在线观看,双语字幕">
+    <title>在线中文字幕 - 高清影视字幕下载与在线观看平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --primary-hover: #b20710;
+            --bg-color: #141414;
+            --card-bg: #1f1f1f;
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: var(--spacing-unit) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            padding: 8px 12px;
+            color: white;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-bar button {
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            padding: 0 16px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #1a1a1a, var(--bg-color));
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        /* Grid Layouts */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        /* Card Component */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 140px;
+            background-color: #333;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            background-color: #1f1f1f;
+            padding: 40px 0;
+            margin: 40px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .feature-item h3 {
+            margin: 16px 0 8px;
+            font-size: 1.25rem;
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background-color: var(--card-bg);
+            margin-bottom: 12px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .faq-question:hover {
+            background-color: #2a2a2a;
+        }
+
+        .faq-answer {
+            padding: 0 16px 16px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #333;
+            padding-top: 12px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item.active .faq-question::before {
+            content: "+";
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar input {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span>在线中文字幕</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">电影字幕</a></li>
+                    <li><a href="#">剧集字幕</a></li>
+                    <li><a href="#">动漫字幕</a></li>
+                    <li><a href="#">纪录片</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索影片、字幕组...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>探索无障碍的视听世界</h1>
+                <p>海量高清中文字幕资源，支持多种格式下载。无论是好莱坞大片、韩剧动漫还是学术纪录片，我们提供精准、同步的字幕文件，助您畅享观影体验。</p>
+                <div class="cta-group">
+                    <a href="#latest" class="btn btn-primary">浏览最新字幕</a>
+                    <a href="#upload" class="btn btn-secondary">贡献字幕</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="latest">
+            <h2 class="section-title">最新收录</h2>
+            <div class="grid-4">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/movie1/300/170" alt="海报" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">电影</span>
+                        <h3 class="card-title">奥本海默：中文字幕版</h3>
+                        <div class="card-meta">
+                            <span>2023-10-15</span>
+                            <span>SRT, ASS</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/drama2/300/170" alt="海报" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">剧集</span>
+                        <h3 class="card-title">绝命毒师 S6 完整中字</h3>
+                        <div class="card-meta">
+                            <span>2023-10-14</span>
+                            <span>SRT, MKV</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/anime3/300/170" alt="海报" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">动漫</span>
+                        <h3 class="card-title">葬送的芙莉莲 第12集</h3>
+                        <div class="card-meta">
+                            <span>2023-10-13</span>
+                            <span>SRT</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/doc4/300/170" alt="海报" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">纪录片</span>
+                        <h3 class="card-title">宇宙的起源 4K中字</h3>
+                        <div class="card-meta">
+                            <span>2023-10-12</span>
+                            <span>SRT, ASS</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>极速下载</h3>
+                        <p>CDN加速服务器，保证字幕文件秒速下载，无延迟。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <h3>专业制作</h3>
+                        <p>由资深字幕组提供，时间轴精准，翻译地道自然。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>安全无毒</h3>
+                        <p>所有文件经过人工审核，确保无病毒、无广告插件。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="categories">
+            <h2 class="section-title">热门分类</h2>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-tag">好莱坞</span>
+                        <h3 class="card-title">好莱坞最新电影字幕</h3>
+                        <p style="color:var(--text-secondary); margin-top:8px; font-size:0.9rem;">收录年度大片及经典老片，涵盖IMAX、杜比音效版本。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-tag">韩剧</span>
+                        <h3 class="card-title">高分韩剧双语字幕</h3>
+                        <p style="color:var(--text-secondary); margin-top:8px; font-size:0.9rem;">独家引进韩剧资源，提供中韩双语字幕切换功能。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-tag">欧美剧集</span>
+                        <h3 class="card-title">美剧英剧全集字幕</h3>
+                        <p style="color:var(--text-secondary); margin-top:8px; font-size:0.9rem;">涵盖HBO、Netflix等平台热门剧集，每周同步更新。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container" style="margin-top: 60px;">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-item active">
+                <div class="faq-question">如何将字幕添加到视频中？</div>
+                <div class="faq-answer">大多数播放器（如VLC、PotPlayer、暴风影音）支持直接拖拽SRT文件到播放器窗口。也可以将字幕文件重命名为与视频文件相同的名称并放在同一文件夹内。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">字幕文件格式有哪些区别？</div>
+                <div class="faq-answer">SRT是最通用的纯文本格式，兼容性最好；ASS/ASS支持更丰富的样式（颜色、字体、位置调整）；SMI是苹果设备常用格式。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">字幕同步不准确怎么办？</div>
+                <div class="faq-answer">建议下载ASS格式的字幕文件，并在播放器中开启“微调时间轴”功能进行手动修正。</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于在线中文字幕</h4>
+                    <p>我们致力于为影迷和字幕爱好者提供一个开放、共享的资源平台。通过专业的翻译和校对，让更多人无障碍地欣赏世界各地的优秀影视作品。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">最新发布</a></li>
+                        <li><a href="#">热门榜单</a></li>
+                        <li><a href="#">分类浏览</a></li>
+                        <li><a href="#">下载帮助</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>合作投稿：contact@example.com</li>
+                        <li>字幕申请：apply@example.com</li>
+                        <li>客服反馈：support@example.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 在线中文字幕网 版权所有 | 本站资源仅供个人学习交流使用，请于下载后24小时内删除。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // 关闭所有其他打开的项
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    child.classList.remove('active');
+                });
+
+                // 如果刚才点击的不是已经打开的，则打开它
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // 搜索框简单的交互反馈
+        const searchInput = document.querySelector('.search-bar input');
+        const searchBtn = document.querySelector('.search-bar button');
+        
+        function handleSearch() {
+            if(searchInput.value.trim() !== "") {
+                // 模拟搜索跳转
+                alert("正在搜索：" + searchInput.value);
+                searchInput.value = "";
+            }
+        }
+
+        searchBtn.addEventListener('click', handleSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleSearch();
+        });
+    </script>
+</body>
+</html>
