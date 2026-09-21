@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="动漫人物绘画教程与技法指南，提供从人体结构、面部表情到色彩渲染的全方位绘画知识，包含人物速写、线稿绘制及上色技巧。">
+    <meta name="keywords" content="动漫人物绘画,二次元绘画,手绘教程,角色设计,漫画技法,人体结构">
+    <title>动漫人物绘画-从零基础到角色设计的全流程技法指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --bg-body: #f5f6fa;
+            --bg-card: #ffffff;
+            --radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        ul { list-style: none; }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-subscribe {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #5649c0;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #fff 0%, var(--bg-body) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: #dfe6e9;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(120deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            border-radius: var(--radius);
+            margin-top: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .hero-image-placeholder::after {
+            content: "作品展示区";
+            opacity: 0.8;
+        }
+
+        /* Core Skills Section */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(108, 92, 231, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .skill-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .skill-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Step-by-Step Guide */
+        .guide-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 30px;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            align-items: flex-start;
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(108, 92, 231, 0.15);
+            line-height: 1;
+            min-width: 60px;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .step-content ul {
+            padding-left: 20px;
+        }
+
+        .step-content li {
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        /* Tools & Materials */
+        .tools-section {
+            background: #2d3436;
+            color: white;
+        }
+
+        .tools-section .section-header h2 {
+            color: white;
+        }
+
+        .tools-section .section-header p {
+            color: #b2bec3;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tool-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tool-card p {
+            font-size: 0.85rem;
+            color: #b2bec3;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background: #dfe6e9;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-light);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #ced6e0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-image-placeholder {
+                height: 250px;
+            }
+
+            .step-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                <span>AnimeDraw</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#skills">核心技法</a></li>
+                    <li><a href="#guide">教程步骤</a></li>
+                    <li><a href="#tools">工具推荐</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-subscribe">加入画师社区</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-tags">
+                    <span class="tag">线稿</span>
+                    <span class="tag">上色</span>
+                    <span class="tag">人体结构</span>
+                    <span class="tag">角色设计</span>
+                </div>
+                <h1>掌握<span>动漫人物绘画</span>的艺术，释放你的创作灵感</h1>
+                <p>从基础的人体比例、面部特征，到光影处理与色彩搭配。无论你是零基础新手还是进阶画师，这里都有适合你的系统化学习路径。</p>
+                <a href="#guide" class="btn-subscribe" style="background: var(--text-main);">开始学习</a>
+                
+                <div class="hero-image-placeholder"></div>
+            </div>
+        </section>
+
+        <!-- Core Skills -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>三大核心绘画技能</h2>
+                    <p>动漫人物绘画不仅仅是画线，而是对结构与美学的综合表达</p>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-icon">📐</div>
+                        <h3>人体结构基础</h3>
+                        <p>理解解剖学是画好角色的关键。掌握头身比、骨骼走向和肌肉分布，让角色动作自然流畅。</p>
+                        <ul class="skill-list">
+                            <li>动态线与透视</li>
+                            <li>头部比例与五官</li>
+                            <li>四肢的关节运动</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-icon">✏️</div>
+                        <h3>线稿与造型</h3>
+                        <p>线条是绘画的灵魂。学会使用不同粗细的线条来表现体积感和轮廓的虚实变化。</p>
+                        <ul class="skill-list">
+                            <li>排线与质感表现</li>
+                            <li>衣褶的绘制逻辑</li>
+                            <li>草图与精细线稿</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3>色彩与光影</h3>
+                        <p>色彩决定了画面的氛围。学习配色原理、色温运用以及如何通过光影塑造立体感。</p>
+                        <ul class="skill-list">
+                            <li>色轮与配色方案</li>
+                            <li>固有色与环境色</li>
+                            <li>打光与阴影层次</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Guide -->
+        <section id="guide" class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>从草图到成品的绘制流程</h2>
+                    <p>一个完整的动漫人物绘画通常包含这四个关键步骤</p>
+                </div>
+                <div class="guide-wrapper">
+                    <div class="step-item">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>概念构思与草图</h3>
+                            <p>在动笔前，先在脑海中或草稿纸上勾勒出角色的基本形态、服装风格和姿势。这一步重点在于确定构图和动态。</p>
+                            <ul>
+                                <li>确定角色性别与年龄特征</li>
+                                <li>设计标志性配饰或发型</li>
+                                <li>使用简单的几何体概括身体结构</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>线稿勾勒</h3>
+                            <p>将草图转化为清晰的线条。注意线条的流畅度，并区分主轮廓线与辅助线，为后续上色留出空间。</p>
+                            <ul>
+                                <li>使用橡皮擦出透视线</li>
+                                <li>加深关节和转折处的线条</li>
+                                <li>处理衣纹的疏密关系</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>铺色与上色</h3>
+                            <p>从大色块开始，确定画面的主色调和辅助色。然后逐步细化面部、头发和衣服的质感。</p>
+                            <ul>
+                                <li>使用半透明图层进行上色</li>
+                                <li>统一光源方向（受光面/背光面）</li>
+                                <li>添加高光和细节纹理</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>后期修饰与特效</h3>
+                            <p>最后一步是调整整体色调，添加背景或特效，增强画面的冲击力和故事感。</p>
+                            <ul>
+                                <li>整体色阶校正</li>
+                                <li>添加噪点或光晕效果</li>
+                                <li>签名与版权标注</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>必备绘画工具</h2>
+                    <p>工欲善其事，必先利其器。根据你的需求选择合适的工具</p>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h4>数位板</h4>
+                        <p>Wacom, Huion等。绘画的核心工具，压感决定了笔触的细腻程度。</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>绘画软件</h4>
+                        <p>Photoshop, Clip Studio Paint, Sai, Krita。各有优劣，Sai适合新手，Clip功能强大。</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>参考素材</h4>
+                        <p>人体解剖书, 照片参考, 网络素材库。灵感与对比的重要来源。</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>数位笔</h4>
+                        <p>XP-Pen, Parblo等。替代传统画笔，提供更精准的数字书写体验。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">零基础多久能学会动漫人物绘画？</div>
+                        <div class="faq-answer">
+                            <p>这取决于练习的频率和方法。基础造型能力通常需要3-6个月的持续练习。建议从简单的几何体开始，逐步过渡到临摹优秀作品，最后尝试原创。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">初学者应该先练素描还是直接画动漫？</div>
+                        <div class="faq-answer">
+                            <p>建议先了解素描的基础知识，如透视、光影和结构，这对画好任何风格都大有裨益。不过，直接临摹动漫线稿也是快速入门的有效途径，可以结合两者进行。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何解决画出来的手很奇怪的问题？</div>
+                        <div class="faq-answer">
+                            <p>多观察真实的手部结构，不要死记硬背。可以用火柴人先定好手肘、手腕和手指的关节位置，再逐步添加肌肉和皮肤。多画速写是解决这一问题的最佳方法。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>AnimeDraw 绘画指南</h4>
+                    <p style="color: #636e72; font-size: 0.9rem;">致力于提供最专业、最系统的二次元绘画教程，帮助每一位热爱绘画的人实现梦想。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">基础入门</a></li>
+                        <li><a href="#">进阶技巧</a></li>
+                        <li><a href="#">工具评测</a></li>
+                        <li><a href="#">资源下载</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">加入社群</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">商务合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 AnimeDraw 绘画指南. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
