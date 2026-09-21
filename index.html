@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="嫁给钻石太子 - 深度解析豪门婚恋题材，提供热门小说推荐、阅读指南及情感故事解析，助你了解霸道总裁与灰姑娘的经典故事模式。">
+    <meta name="keywords" content="嫁给钻石太子, 豪门小说, 霸道总裁, 婚恋小说, 灰姑娘故事">
+    <title>嫁给钻石太子 - 豪门婚恋题材小说推荐与阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #d4af37; /* 香槟金，象征钻石与奢华 */
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 6rem 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Character Archetypes Grid */
+        .archetypes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-header {
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-header img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-weight: bold;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .card-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .read-link {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .read-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Reading Guide Section */
+        .guide-section {
+            background-color: #fff;
+        }
+
+        .guide-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .guide-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .guide-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .guide-list {
+            margin-top: 2rem;
+        }
+
+        .guide-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-main);
+        }
+
+        .guide-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.5rem;
+        }
+
+        .guide-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .guide-image img {
+            width: 100%;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-color);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        summary:hover {
+            background-color: #f8f8f8;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .faq-content {
+            padding: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            .guide-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .guide-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>✦</span> 嫁给钻石太子
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#stories">热门故事</a></li>
+                    <li><a href="#guide">阅读指南</a></li>
+                    <li><a href="#types">角色设定</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>嫁给钻石太子</h1>
+            <p>探索豪门婚恋题材的魅力，解读霸道总裁与灰姑娘的经典故事模式，发现属于你的浪漫篇章。</p>
+            <a href="#stories" class="cta-button">开始阅读</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section 1: Character Archetypes (Stories) -->
+        <section id="stories" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>经典故事模式</h2>
+                    <div class="divider"></div>
+                    <p style="margin-top: 1rem; color: #666;">深入了解这一题材中常见的角色设定与情节发展</p>
+                </div>
+
+                <div class="archetypes-grid">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <!-- Placeholder using picsum with seed -->
+                            <img src="https://picsum.photos/seed/diamond1/400/250" alt="霸道总裁形象">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">男主角</span>
+                            <h3>钻石太子</h3>
+                            <p>通常指拥有显赫家世、极高商业地位且性格冷酷或深情的男性角色。他们往往拥有掌控一切的自信，却只对女主角展现出温柔的一面。</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>关键词：高冷、权势、深情</span>
+                            <a href="#" class="read-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <img src="https://picsum.photos/seed/girl1/400/250" alt="坚韧女主角形象">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">女主角</span>
+                            <h3>坚韧灰姑娘</h3>
+                            <p>出身平凡但内心强大、独立自主的女性。她们通常在逆境中保持善良与智慧，凭借个人魅力赢得太子的青睐，而非单纯的依附。</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>关键词：独立、善良、逆袭</span>
+                            <a href="#" class="read-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card-header">
+                            <img src="https://picsum.photos/seed/conflict/400/250" alt="家族冲突">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">核心冲突</span>
+                            <h3>家族与真爱</h3>
+                            <p>故事的核心往往围绕家族利益、政治联姻的阻碍以及外界对这段关系的质疑展开。最终，真爱战胜一切，成就圆满结局。</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>关键词：阻碍、牺牲、圆满</span>
+                            <a href="#" class="read-link">查看详情 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Reading Guide -->
+        <section id="guide" class="section guide-section">
+            <div class="container">
+                <div class="guide-content">
+                    <div class="guide-text">
+                        <h2>如何选择适合你的作品？</h2>
+                        <p>“嫁给钻石太子”作为豪门文的一个分支，拥有丰富的子类型。在选择阅读时，可以根据自己的心情偏好来决定：</p>
+                        <p>有些故事侧重于甜宠日常，强调两人之间的互动与甜蜜；有些则侧重于商战与权谋，展现主角在商业帝国的博弈中并肩作战；还有一类偏向于虐恋，讲述由于误会和家族压力带来的情感波折。</p>
+                        <ul class="guide-list">
+                            <li><strong>甜宠向：</strong> 侧重情感升温，冲突少，适合放松心情。</li>
+                            <li><strong>逆袭向：</strong> 女主从底层崛起，展现个人奋斗史。</li>
+                            <li><strong>重生向：</strong> 带着记忆重来，弥补前世遗憾，剧情反转多。</li>
+                        </ul>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/romance/600/400" alt="浪漫阅读场景">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: FAQ -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="faq-grid">
+                    <details>
+                        <summary>这类小说通常有哪些结局？</summary>
+                        <div class="faq-content">
+                            <p>结局通常比较圆满。最常见的包括“大团圆结局”，两人消除误会、家族认可并步入婚姻殿堂；也有“追妻火葬场”式的结局，即男主在失去女主后才追悔莫及，最终挽回爱情。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>为什么这类题材如此受欢迎？</summary>
+                        <div class="faq-content">
+                            <p>主要因为满足了人们对美好生活的向往。读者可以在故事中体验到被极致宠爱、身份跨越以及解决现实生活难题的爽快感，是一种有效的情感宣泄方式。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>阅读这类小说需要注意什么？</summary>
+                        <div class="faq-content">
+                            <p>由于部分作品为了制造戏剧冲突，可能会包含夸张的情节或并不现实的价值观。建议读者保持理性，将其视为娱乐消遣，不必过度代入现实生活。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>有哪些类似的热门作品推荐？</summary>
+                        <div class="faq-content">
+                            <p>除了“嫁给钻石太子”这一关键词，类似的题材还包括“闪婚”、“契约婚姻”、“豪门继妹”等。这些故事通常都包含相似的元素，如契约、误会、宠溺和最终的真爱回归。</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>嫁给钻石太子</h4>
+                    <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6;">
+                        专注分享豪门婚恋题材小说推荐与阅读指南，为读者提供最优质的娱乐内容体验。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#stories">热门故事</a></li>
+                        <li><a href="#guide">阅读指南</a></li>
+                        <li><a href="#types">角色设定</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关标签</h4>
+                    <ul>
+                        <li><a href="#">豪门恩怨</a></li>
+                        <li><a href="#">霸道总裁</a></li>
+                        <li><a href="#">甜宠文</a></li>
+                        <li><a href="#">小说推荐</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 嫁给钻石太子专题站. All Rights Reserved. 本站内容仅供娱乐参考.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
